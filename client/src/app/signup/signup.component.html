@@ -1,0 +1,30 @@
+<div class="container login">
+  <div class="col-xs-4 col-sm-6">
+    <h2>Sign Up</h2>
+    <form>
+      <div class="form-group">
+        <label for="name"></label>
+        <input class="form-control" id="name" type="text" name="username" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="password"></label>
+        <input class="form-control" id="password" type="password" name="password" placeholder="Your password">
+      </div>
+      <div class="form-group">
+        <label for="email"></label>
+        <input class="form-control" id="email" type="email" name="email" placeholder="Your email">
+      </div>
+      <div class="form-group">
+        <label for="sex"></label>
+        <input class="form-control" id="sex" type="sex" name="sex" placeholder="Your sex">
+      </div>
+      <div class="form-group">
+        <label for="age"></label>
+        <input class="form-control" id="age" type="age" name="age" placeholder="Your age">
+      </div>
+      <textarea name="message" rows="10" cols="30" placeholder="About you"></textarea>
+      <button (click)="signup(username,password,email,sex,age,about)" class="btn btn-info"> Signup</button>
+    </form>
+    <h5>U don´t have a count? <a href="/">Login!</a></h5>
+  </div>
+</div>
