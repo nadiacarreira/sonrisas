@@ -1,0 +1,44 @@
+body{
+
+  }
+.container-fluid{
+  height: 400px;
+  background-size: cover;
+}
+.backgroundtedy{
+background-image: url("../../../assets/img/tedy.jpg");
+background-position: center;
+}
+.backgroundbox{
+background-image: url("../../../assets/img/box.jpg");
+background-position: center;
+background-repeat: no-repeat;
+
+}
+.backgroundbaby{
+background-image: url("../../../assets/img/baby.jpg");
+background-position: center;
+}
+
+p{
+  color: #fff;
+  font-family: 'Bad Script', cursive;
+  font-size: 1.5em;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+span{
+  font-size: 0.5em;
+}
+section>div{
+  width: 300px;
+  margin: 0 auto;
+  height: 200px;
+  padding-top: 80px;
+}
+.button{
+  background-color: rgba(119, 118, 119, 0.5);
+  border:1px solid #fff;
+  padding: 10px 8%;
+  color: #fff;
+}

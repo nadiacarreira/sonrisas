@@ -1,3 +1,11 @@
-<p>
-  centres works!
-</p>
+<h1> Nuestros centros </h1>
+<div class="card-columns container">
+  <div *ngFor="let centro of centres" class="card">
+    <img class="card-img-top" [src]="centro.photo"/>
+    <div>
+      <h4 class="card-title">{{ centro.name }}</h4>
+      <p class="card-text" maxlength="10">{{ centro.about }}</p>
+    </div>
+    <button type="button" class="btn btn-outline-primary btn-block" [routerLink]="['centro', centres._id]">Detalles</button>
+  </div>
+</div>

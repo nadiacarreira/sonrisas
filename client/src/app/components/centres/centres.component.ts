@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CentreService } from '../../../services/centres.service';
 
 @Component({
   selector: 'app-centres',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./centres.component.css']
 })
 export class CentresComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  centres:any =[];
+  constructor( private centreService:CentreService) {
+    this.centreService.getCentres()
+    .map(centro => this.centres = centro)
+    .subscribe();
   }
 
+  ngOnInit() {
+
+  }
 }

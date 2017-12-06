@@ -4,6 +4,7 @@ const Kid = require('../models/Kid');
 
 
 kids.get('/', (req, res, next) => {
+  console.log('ENTRAAAAA')
   Kid.find({}, (err, kids) => {
     if (err) { return res.json(err).status(500); }
 
