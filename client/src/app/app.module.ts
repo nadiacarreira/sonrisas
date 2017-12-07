@@ -27,6 +27,10 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { EconomicaComponent } from './components/economica/economica.component';
 import { JuguetesComponent } from './components/juguetes/juguetes.component';
 import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
+import { MapComponent } from './components/map/map.component';
+
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -43,12 +47,16 @@ import { HeroDetailsComponent } from './components/hero-details/hero-details.com
     EconomicaComponent,
     JuguetesComponent,
     HeroDetailsComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    APP_ROUTING
+    APP_ROUTING,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDKH84vXMFj4mYyrcEgFydn7EQGzmZYKq0'
+    })
   ],
   providers: [AuthService,
               HeroesService,

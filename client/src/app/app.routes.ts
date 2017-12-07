@@ -18,7 +18,7 @@ const APP_ROUTES: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'economica', component: EconomicaComponent },
   { path: 'juguetes', component: JuguetesComponent },
-  { path: 'heroe-details/:id', component: HeroDetailsComponent },
+  { path: 'heroes/:id', component: HeroDetailsComponent },
 
   { path: 'login-form', component: LoginFormComponent },
   { path: 'profile', component: ProfileComponent },

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { HeroesService } from '../../../services/heroes.service';
 
 @Component({
@@ -8,22 +8,14 @@ import { HeroesService } from '../../../services/heroes.service';
   styleUrls: ['./hero-details.component.css']
 })
 export class HeroDetailsComponent implements OnInit {
-  kids;
+  kid;
   constructor(
-    private router:Router,
     private route:ActivatedRoute,
-    public heroesService: HeroesService) { }
-
-  ngOnInit() {
-    this.route.params.subscribe(params=>{
-      console.log(`EL parametro recibido es: ${params['id']}`);
-      this.getHeroDetails(params['id'])
-    });
-  }
-  getHeroDetails(id) {
-    this.heroesService.get(id)
-      .subscribe((hero) => {
-        this.kids = hero;
+    private heroesService: HeroesService) {
+      this.route.params.subscribe(params=>{
+        this.heroesService.get(params['id'])
+        .subscribe(hero => this.kid = hero)
       });
   }
+  ngOnInit() {}
 }

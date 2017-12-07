@@ -1,11 +1,10 @@
 <h1> Super Heroes </h1>
 <div class="card-columns container">
-  <div *ngFor="let hero of kids" class="card">
-    <img class="card-img-top" [src]="hero.photo"/>
+  <div class="card">
+    <!-- <img class="card-img-top" [src]="kid.photo"/> -->
     <div>
-      <h4 class="card-title">{{ hero.name }}</h4>
-      <p class="card-text">{{ hero.about }}</p>
+      <h4 class="card-title">{{ kid.name }}</h4>
+      <p class="card-text">{{ kid.about }}</p>
     </div>
-    <a [routerLink]="['heroes', kids._id]"> View Details </a>
   </div>
 </div>
