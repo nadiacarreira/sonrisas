@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import  { CentreService } from '../../../services/centres.service';
+
 
 @Component({
   selector: 'app-economica',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./economica.component.css']
 })
 export class EconomicaComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  centres:any =[];
+  constructor( private centreService:CentreService) {
+    this.centreService.getCentres()
+    .map(centro => this.centres = centro)
+    .subscribe();
   }
-
+ngOnInit(){}
 }

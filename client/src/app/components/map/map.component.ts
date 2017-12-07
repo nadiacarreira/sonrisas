@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  markers:marker[]=[
+  markers:Array<marker>= [
     {
       name: 'Unidad de Madres Jaime Garralda, Madrid',
       lat: 40.4320067,
@@ -14,19 +14,19 @@ export class MapComponent implements OnInit {
       arrastrable: false
     },
     {
-      name: 'Unidad de Madres Jaime Garralda, Madrid',
+      name: 'Unidad de Madres Jaime Garralda, Sevilla',
       lat: 37.392248,
       lng: -5.847396,
       arrastrable: false
     },
     {
-      name: 'Unidad de Madres Jaime Garralda, Madrid',
+      name: 'Unidad de Madres Jaime Garralda, Las palmas',
       lat: 39.566854,
       lng: 2.685642,
       arrastrable: false
     }
  ];
- 
+
   constructor() {
   }
     zoom:number = 10;
@@ -44,6 +44,7 @@ export class MapComponent implements OnInit {
     console.log(termino)
   }
  }
+
 //tipo de marcador
 interface marker{
   name:string;

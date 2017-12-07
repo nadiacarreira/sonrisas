@@ -2,3 +2,9 @@
   juguetes works!
 </p>
 <app-map></app-map>
+<div class="card-columns container">
+  <div *ngFor="let centro of centres" class="card">
+    <div>
+      <h4 class="card-title">{{ centro.name }}</h4>
+      <p class="card-text">{{ centro.about }}</p>
+    </div>
