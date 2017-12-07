@@ -11,9 +11,7 @@ const BASEURL = `${DOMAIN}${PATH}`;
 @Injectable()
 export class HeroesService {
   kids;
-  constructor(private http: Http) {
-  console.log('servicio listo para usar');
-  }
+  constructor(private http: Http) {}
   getKids():Observable<any>{
     return this.http.get(BASEURL)
                     .map(res => res.json());

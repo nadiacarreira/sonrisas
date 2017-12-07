@@ -30,6 +30,8 @@ import { HeroDetailsComponent } from './components/hero-details/hero-details.com
 import { MapComponent } from './components/map/map.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { MarkerManager } from '@agm/core';
+import { CentresDetailsComponent } from './components/centres-details/centres-details.component';
 
 
 @NgModule({
@@ -48,6 +50,7 @@ import { AgmCoreModule } from '@agm/core';
     JuguetesComponent,
     HeroDetailsComponent,
     MapComponent,
+    CentresDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,9 @@ import { AgmCoreModule } from '@agm/core';
   ],
   providers: [AuthService,
               HeroesService,
-              CentreService],
+              CentreService,
+              MarkerManager
+              ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

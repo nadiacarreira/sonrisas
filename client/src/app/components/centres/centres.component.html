@@ -4,8 +4,8 @@
     <img class="card-img-top" [src]="centro.photo"/>
     <div>
       <h4 class="card-title">{{ centro.name }}</h4>
-      <p class="card-text" maxlength="10">{{ centro.about }}</p>
+      <p class="card-text">{{ centro.about }}</p>
     </div>
-    <button type="button" class="btn btn-outline-primary btn-block" [routerLink]="['centro', centres._id]">Detalles</button>
+    <a [routerLink]="['/centres', centro._id]"> View Details</a>
   </div>
 </div>

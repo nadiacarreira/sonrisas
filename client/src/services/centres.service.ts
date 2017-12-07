@@ -10,13 +10,14 @@ const BASEURL = `${DOMAIN}${PATH}`;
 
 @Injectable()
 export class CentreService {
-  constructor(private http: Http) {
-  console.log('servicio listo para usar');
-  }
+  centres;
+  constructor(private http: Http) {}
   getCentres():Observable<any>{
-    console.log("hola");
-    console.log(BASEURL)
     return this.http.get(BASEURL)
                     .map(res => res.json());
   }
+  get(id):Observable<any> {
+    return this.http.get(`${BASEURL}/${id}`)
+                    .map(res => res.json());
+    }
 }
