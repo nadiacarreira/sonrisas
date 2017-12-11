@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class LoginFormComponent{
 
 
-  constructor(private auth:AuthService, private router: Router ) { }
+  constructor(private auth:AuthService,
+              private router: Router ) { }
 
   login(username, password){
     this.auth.login(username,password).subscribe();

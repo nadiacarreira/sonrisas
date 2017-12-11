@@ -1,0 +1,17 @@
+.card{
+    padding: 2%;
+    color:#777677;
+    text-align: center;
+}
+.card-text{
+  margin-bottom: 30px;
+}
+h1{
+  color:#777677;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card-img-top{
+  margin-bottom: 20px;
+}

@@ -1,11 +1,15 @@
-<h1> Nuestros centros </h1>
-<div class="card-columns container">
-  <div *ngFor="let centro of centres" class="card">
-    <img class="card-img-top" [src]="centro.photo"/>
+<div class="container animated fadeIn fast">
+  <h2>Nuestros Centros</h2><br><p> Conoce la historia al detalle de cada centro.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+  <div *ngFor="let centro of centres">
+    <figure><img [src]="centro.photo"/></figure>
     <div>
-      <h4 class="card-title">{{ centro.name }}</h4>
-      <p class="card-text">{{ centro.about }}</p>
+      <h4>{{ centro.name }}</h4>
+      <p>{{ centro.about }}</p>
     </div>
-    <a [routerLink]="['/centres', centro._id]"> View Details</a>
+    <a class="btn btn-info" [routerLink]="['/centres', centro._id]"> Ver detalles</a>
   </div>
 </div>

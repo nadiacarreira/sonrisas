@@ -4,27 +4,27 @@
     <form>
       <div class="form-group">
         <label for="name"></label>
-        <input class="form-control" id="name" type="text" name="username" placeholder="Your name">
+        <input class="form-control" id="name" type="text" [(ngModel)]="formInfo.username" name="username" placeholder="Your name">
       </div>
       <div class="form-group">
         <label for="password"></label>
-        <input class="form-control" id="password" type="password" name="password" placeholder="Your password">
+        <input class="form-control" id="password" type="password" [(ngModel)]="formInfo.password" name="password" placeholder="Your password">
       </div>
       <div class="form-group">
         <label for="email"></label>
-        <input class="form-control" id="email" type="email" name="email" placeholder="Your email">
+        <input class="form-control" id="email" type="email" [(ngModel)]="formInfo.email" name="email" placeholder="Your email">
       </div>
       <div class="form-group">
         <label for="sex"></label>
-        <input class="form-control" id="sex" type="sex" name="sex" placeholder="Your sex">
+        <input class="form-control" id="sex" type="sex" [(ngModel)]="formInfo.sex" name="sex" placeholder="Your sex">
       </div>
       <div class="form-group">
         <label for="age"></label>
-        <input class="form-control" id="age" type="age" name="age" placeholder="Your age">
+        <input class="form-control" id="age" type="age" [(ngModel)]="formInfo.age" name="age" placeholder="Your age">
       </div>
-      <textarea name="message" rows="10" cols="30" placeholder="About you"></textarea>
-      <button (click)="signup(username,password,email,sex,age,about)" class="btn btn-info"> Signup</button>
+      <!-- <textarea name="message" rows="10" cols="30" placeholder="About you" name="about"></textarea> -->
+      <button (click)="signup()" class="btn btn-info"> Signup</button>
     </form>
-    <h5>U don´t have a count? <a href="/">Login!</a></h5>
+    <h5>U don´t have a count? <a href="/login-form">Login!</a></h5>
   </div>
 </div>

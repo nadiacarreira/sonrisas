@@ -33,8 +33,9 @@ export class AuthService {
     return this.user;
   }
 
-  signup(username:string, password:string,email:string,sex: string,age: number,about: string) {
-    return this.http.post(`${BASE_URL}/signup`, {username, password, email, sex, age, about}, this.options)
+  signup(username, password, email, sex, age) {
+    console.log(username, password)
+    return this.http.post(`${BASE_URL}/signup`, {username, password, email, sex, age}, this.options)
       .map(res => res.json())
       .map(user => this.handleUser(user))
       .catch(this.handleError);

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TwoButtonLinkComponent } from './two-button-link.component';
+import { SweetsAlertComponent } from './sweets-alert.component';
 
-describe('TwoButtonLinkComponent', () => {
-  let component: TwoButtonLinkComponent;
-  let fixture: ComponentFixture<TwoButtonLinkComponent>;
+describe('SweetsAlertComponent', () => {
+  let component: SweetsAlertComponent;
+  let fixture: ComponentFixture<SweetsAlertComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TwoButtonLinkComponent ]
+      declarations: [ SweetsAlertComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TwoButtonLinkComponent);
+    fixture = TestBed.createComponent(SweetsAlertComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

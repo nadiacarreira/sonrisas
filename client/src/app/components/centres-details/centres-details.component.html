@@ -1,10 +1,14 @@
-<h1> Centre details </h1>
-<div class="card-columns container">
-  <div class="card">
-    <img class="card-img-top" [src]="centre.photo"/>
-    <div>
-      <h4 class="card-title">{{ centre.name }}</h4>
-      <p class="card-text">{{ centre.description }}</p>
+<div class="container">
+  <h2>Los centros al detalle</h2>
+  <figure><img class="card-img-top" [src]="centre.photo"/></figure>
+  <div>
+    <h4>{{ centre.name }}</h4>
+    <div class="grey">
+    <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ centre.direction }}</p>
+    <p>Celdas: {{ centre.cell }}</p>
+    <p>Número de cuenta: {{ centre.countNumber }}</p>
     </div>
+    <p>{{ centre.description }}</p>
   </div>
+  <a class="btn btn-info" [routerLink]="['/centres']">Atras</a>
 </div>

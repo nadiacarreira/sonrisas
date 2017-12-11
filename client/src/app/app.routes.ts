@@ -4,7 +4,6 @@ import { CentresComponent } from './components/centres/centres.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { EconomicaComponent } from './components/economica/economica.component';
 import { JuguetesComponent } from './components/juguetes/juguetes.component';
-import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
 import { CentresDetailsComponent } from './components/centres-details/centres-details.component';
 
 
@@ -19,7 +18,6 @@ const APP_ROUTES: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'economica', component: EconomicaComponent },
   { path: 'juguetes', component: JuguetesComponent },
-  { path: 'heroes/:id', component: HeroDetailsComponent },
   { path: 'centres/:id', component: CentresDetailsComponent },
 
   { path: 'login-form', component: LoginFormComponent },

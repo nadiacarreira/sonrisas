@@ -1,10 +1,15 @@
-<p>
-  juguetes works!
-</p>
-<app-map></app-map>
-<div class="card-columns container">
-  <div *ngFor="let centro of centres" class="card">
-    <div>
-      <h4 class="card-title">{{ centro.name }}</h4>
-      <p class="card-text">{{ centro.about }}</p>
-    </div>
+<div class="container animated fadeIn fast">
+  <h2>¿A qué centro quieres ayudar?</h2><br><p> Puedes ver la localización en el mapa o
+  ver nuestro listado con sus respectivas direcciones.</p>
+
+  <app-map></app-map>
+  <h3>Dibujemos sonrisas juntos</h3>
+  <p>Esta es tu oportunidad, puedes donar juguetes que tus pequeños super héroes no utilizen,
+  para poder hacer feliz a otros niñ@s.
+  Tambén aceptamos material didáctico, como pinturas, lápices, cuentos, puzzles...
+  <br>Esas pequeñas cosas que abren una pequeña brecha al mundo real.</p>
+  <div *ngFor="let centro of centres">
+    <h4><i class="fa fa-map-marker" aria-hidden="true"></i>{{ centro.name }}</h4>
+    <p>{{ centro.direction }}</p>
+  </div>
+</div>

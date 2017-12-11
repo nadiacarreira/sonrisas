@@ -10,6 +10,7 @@ import { APP_ROUTING } from './app.routes';
 // services
 import { HeroesService } from '../services/heroes.service';
 import { CentreService } from '../services/centres.service';
+import { SweetAlertService } from '../services/sweets.service';
 
 
 // components
@@ -21,17 +22,17 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { CentresComponent } from './components/centres/centres.component';
-import { TwoButtonLinkComponent } from './components/shared/two-button-link/two-button-link.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { EconomicaComponent } from './components/economica/economica.component';
 import { JuguetesComponent } from './components/juguetes/juguetes.component';
-import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
 import { MapComponent } from './components/map/map.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { MarkerManager } from '@agm/core';
 import { CentresDetailsComponent } from './components/centres-details/centres-details.component';
+import { SweetsAlertComponent } from './components/sweets-alert/sweets-alert.component';
+
 
 
 @NgModule({
@@ -43,15 +44,14 @@ import { CentresDetailsComponent } from './components/centres-details/centres-de
     HomeComponent,
     HeroesComponent,
     CentresComponent,
-    TwoButtonLinkComponent,
     ProfileComponent,
     EditProfileComponent,
     EconomicaComponent,
     JuguetesComponent,
-    HeroDetailsComponent,
     MapComponent,
     CentresDetailsComponent,
-  ],
+    SweetsAlertComponent,
+    ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -64,7 +64,8 @@ import { CentresDetailsComponent } from './components/centres-details/centres-de
   providers: [AuthService,
               HeroesService,
               CentreService,
-              MarkerManager
+              MarkerManager,
+              SweetAlertService
               ],
   bootstrap: [AppComponent]
 })

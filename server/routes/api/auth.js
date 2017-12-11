@@ -6,7 +6,8 @@ const authRoutes = express.Router();
 const profileRoutes = express.Router();
 
 authRoutes.post('/signup', (req, res, next) => {
-  const {username, password, email, sex, age, about, photo, helpProfile} = req.body;
+  console.log('entro en el back');
+  const {username, password, email, sex, age} = req.body;
 
   if (!username || !password) {
     res.status(400).json({ message: 'Provide username and password' });
@@ -28,10 +29,7 @@ authRoutes.post('/signup', (req, res, next) => {
       password: hashPass,
       email,
       sex,
-      age,
-      about,
-      photo,
-      helpProfile
+      age
     });
     return theUser.save();
   })
@@ -54,7 +52,6 @@ authRoutes.post('/signup', (req, res, next) => {
 
 
 authRoutes.post('/login', (req, res, next) => {
-  console.log(req.body);
   passport.authenticate('local', (err, theUser, failureDetails) => {
     if (err) {
       res.status(500).json({ message: 'Something went wrong' });

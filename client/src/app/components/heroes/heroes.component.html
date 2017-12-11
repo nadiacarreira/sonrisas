@@ -1,11 +1,12 @@
-<h1> Super Heroes </h1>
-<div class="card-columns container">
+<h1> Historias de nuestros super héroes: </h1>
+<div class="card-columns container animated fadeIn fast">
   <div *ngFor="let hero of kids" class="card">
-    <!-- <img class="card-img-top" [src]="hero.photo"/> -->
+    <img class="card-img-top" src="../assets/img/cat.png" alt="">
+   <!-- <img class="card-img-top" [src]="hero.photo"/> -->
     <div>
       <h4 class="card-title">{{ hero.name }}</h4>
-    <p class="card-text">{{ hero.about }}</p>     <!-- poner que te salgan unas lineas solo -->
+      <p class="card-text">Edad: {{ hero.age }}</p>
+      <p class="card-text">{{ hero.about }}</p>
     </div>
-    <a [routerLink]="['/heroes', hero._id]"> View Details</a>
   </div>
 </div>

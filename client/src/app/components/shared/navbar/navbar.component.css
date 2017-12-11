@@ -1,4 +1,6 @@
-li{
-  display: inline-block;
-  margin-left: 2%;
+.navbar-light, .dropdown-menu{
+background: #c6e4d4;
+}
+.fluid-container, .main-container  {
+    margin-top: 0;
 }
