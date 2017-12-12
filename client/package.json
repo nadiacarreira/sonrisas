@@ -24,11 +24,15 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@types/socket.io": "^1.4.31",
     "angular2-google-maps": "^0.17.0",
     "angular2-material-datepicker": "^0.5.0",
+    "angular4-datepicker": "^1.0.1",
     "core-js": "^2.4.1",
+    "mydatepicker": "^2.6.1",
     "rxjs": "^5.5.4",
     "sweetalert": "^2.0.8",
+    "socket.io": "^2.0.4",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

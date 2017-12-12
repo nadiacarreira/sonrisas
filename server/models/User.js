@@ -16,6 +16,10 @@ const userSchema = new Schema(
   helpProfile: {
     type: String,
     enum: ['voluntarie', 'donate']
+  },
+  role: {
+    type: String, enum: ['client', 'admin'],
+    default:'client'
   }
 });
 

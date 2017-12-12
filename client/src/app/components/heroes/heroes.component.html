@@ -1,12 +1,12 @@
 <h1> Historias de nuestros super héroes: </h1>
 <div class="card-columns container animated fadeIn fast">
   <div *ngFor="let hero of kids" class="card">
-    <img class="card-img-top" src="../assets/img/cat.png" alt="">
-   <!-- <img class="card-img-top" [src]="hero.photo"/> -->
+   <img class="card-img-top" [src]="hero.photo"/>
     <div>
       <h4 class="card-title">{{ hero.name }}</h4>
       <p class="card-text">Edad: {{ hero.age }}</p>
       <p class="card-text">{{ hero.about }}</p>
     </div>
+    <a class="btn btn-info" [routerLink]="['/edit-heroes', hero._id]">Edit</a>
   </div>
 </div>

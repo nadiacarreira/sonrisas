@@ -16,19 +16,8 @@ export class ProfileService {
   private options = {withCredentials:true};
 
   constructor(private http: Http) {}
-
-  // deleteUser(){
-  //   return this.http.delete(`${BASE_URL}/profile/delete`)
-  //   .map(res => res.json());
-  // }
-  //
-  // getUserDetail(id){
-  //   return this.http.get(`${BASE_URL}/profile/${id}`)
-  //                   .map(res => res.json());
-  // }
-  //
-  // getEditUser(id){
-  //   return this.http.get(`${BASE_URL}/profile/edit-profile/${id}`)
-  //                   .map(res => res.json());
-  // }
+  getUserDetail(id){
+    return this.http.get(`${BASEURL}/${id}`)
+                    .map(res => res.json());
+  }
 }

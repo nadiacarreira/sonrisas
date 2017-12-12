@@ -2,7 +2,7 @@ const express = require('express');
 const centres = express.Router();
 const Centre = require('../models/Centre');
 
-
+// list centres
 centres.get('/', (req, res, next) => {
   Centre.find({}, (err, centres) => {
     if (err) { return res.json(err).status(500); }
@@ -11,6 +11,7 @@ centres.get('/', (req, res, next) => {
   });
 });
 
+// id centres
 centres.get('/:id', (req, res, next) => {
   Centre.findById(req.params.id, (err, centres) => {
     if (err)    { return res.json(err).status(500); }
@@ -20,6 +21,7 @@ centres.get('/:id', (req, res, next) => {
   });
 });
 
+// new centres
 centres.post('/centres', (req, res, next) => {
   const newcentres = new Centre ({
     name: req.body.name,
@@ -36,6 +38,17 @@ console.log(newcentres);
                            return res.json(newcentres);
   });
 });
+
+// edit centres
+// centres.put('/edit-centres/:id', (req, res, next) => {
+//   const {name, direction, constructionYear, cell, countNumber}= req.body;
+//   const updates = {name, direction, constructionYear, cell, countNumber};
+// Kid.findByIdAndUpdate(req.params.id, updates, {new:true})
+// .then(p => res.status(200).json(p))
+// .catch(e => res.status(500).json({error:e.message}));
+// });
+//
+
 
 
 module.exports = centres;

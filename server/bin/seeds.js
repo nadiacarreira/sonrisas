@@ -86,7 +86,7 @@ const centres = [
 
 const kids = [
   {
-    photo:'../public/img/bat.png',
+    photo:'http://localhost:3000/img/bat.png',
     name:"Batman",
     age:1,
     about:`Un niño de año y medio y unos ojos grises enormes. Mira serio a María,
@@ -96,7 +96,7 @@ const kids = [
     adulto que la mayoría de los adultos que le rodean.`,
   },
   {
-    photo:'../public/img/cat.png',
+    photo:'http://localhost:3000/img/cat.png',
     name:"CatWoman",
     age:2,
     about:`La mirada de Alba también inquieta. No conoce otra vida que la que hay
@@ -107,7 +107,7 @@ const kids = [
     salió del centro penitenciario para seguir creciendo en un centro de acogida.`,
   },
   {
-    photo:'../public/img/iron.png',
+    photo:'http://localhost:3000/img/iron.png',
     name:"Ironman",
     age:1,
     about:`Un niño de año y medio y unos ojos grises enormes. Mira serio a María,
@@ -117,7 +117,7 @@ const kids = [
     adulto que la mayoría de los adultos que le rodean.`,
   },
   {
-    photo:'../public/img/hulk.png',
+    photo:'http://localhost:3000/img/hulk.png',
     name:"Hulk",
     age:2,
     about:`La mirada de Alba también inquieta. No conoce otra vida que la que hay
@@ -128,7 +128,7 @@ const kids = [
     salió del centro penitenciario para seguir creciendo en un centro de acogida.`,
   },
   {
-    photo:'../public/img/hawgirl.png',
+    photo:'http://localhost:3000/img/hawgirl.png',
     name:"Hawk Girl",
     age:2,
     about:`La mirada de Alba también inquieta. No conoce otra vida que la que hay
@@ -139,7 +139,7 @@ const kids = [
     salió del centro penitenciario para seguir creciendo en un centro de acogida.`,
   },
   {
-    photo:'../public/img/wonder.png',
+    photo:'http://localhost:3000/img/wonder.png',
     name:"Wonder Woman",
     age:2,
     about:`La mirada de Alba también inquieta. No conoce otra vida que la que hay
@@ -152,7 +152,7 @@ const kids = [
 ];
 
 
-//preguntar
+
 Centre.create(centres, (err, centres) => {
   if (err){ throw(err) }
   console.log("Success", centres);

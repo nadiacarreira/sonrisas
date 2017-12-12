@@ -1,0 +1,32 @@
+<div class="container login">
+  <div class="col-xs-4 col-sm-6">
+    <h2>Nuevos Centros</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" id="name" type="text" [(ngModel)]="name" name="username" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label for="direction">Direction</label>
+        <input class="form-control" id="direction" type="text" [(ngModel)]="direction" name="direction" placeholder="Direction">
+      </div>
+      <div>
+        <label>Image</label>
+        <input type="file" [(ngModel)]="image" name="image" />
+      </div>
+      <div class="form-group">
+        <label for="constructionYear">Construction year</label>
+        <input class="form-control" id="constructionYear" type="number" [(ngModel)]="constructionYear" name="constructionYear" placeholder="Construction year">
+      </div>
+      <div class="form-group">
+        <label for="cell">Cell</label>
+        <input class="form-control" id="cell" type="number" [(ngModel)]="cell" name="cell" placeholder="Cell">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input class="form-control" id="description" type="text" [(ngModel)]="description" name="description" placeholder="Cell">
+      </div>
+      <button type="button" class="btn btn-info">Upload</button>
+    </form>
+  </div>
+</div>

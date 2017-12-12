@@ -1,0 +1,17 @@
+<div class="container animated fadeIn fast">
+  <h2>Elige tu fecha para ser voluntario</h2><br>
+  <p>Imaginad que solo conocéis los muros de un patio, vivís en una habitación con vuestras madres. A los tres años, os separan<br> ¿por qué?
+  <br><br>Estamos buscando personas con empatia, cariñosas y amables, que puedan estar una tarde a estos peques:</p>
+<ul>
+  <li>Para ir con los niños a los parques</li>
+  <li>Ayudarles a buscar aficiones</li>
+  <li>Intentar que se distraigan</li>
+  <li>Jugar con ellos</li>
+</ul>
+  <div class="col-xs-4 col-sm-6">
+    <form #myForm="ngForm" novalidate>
+      <my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="model" required></my-date-picker>
+    </form>
+  </div>
+  <a class="btn btn-info">Enviar mi propuesta</a>
+</div>

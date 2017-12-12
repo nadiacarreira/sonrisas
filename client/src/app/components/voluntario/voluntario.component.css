@@ -1,0 +1,38 @@
+.container {
+  text-align: center;
+  color: #777677;
+}
+
+.container>div {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 20px 5%;
+}
+
+.container>div:first-of-type {
+  margin-top: 20px;
+}
+
+.container>p>span {
+  line-height: 400%;
+}
+
+.container ul li {
+  list-style: none;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: rgba(119, 118, 119, .5);
+  border-color: transparent;
+  margin-bottom: 40px;
+}
+
+.btn-info:hover {
+  background: #6A808A;
+}
+
+.container a {
+  text-decoration: none;
+  color: #FFF;
+}

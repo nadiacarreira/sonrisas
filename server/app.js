@@ -15,6 +15,9 @@ const app = express();
 const auth = require('./routes/api/auth');
 const kids = require('./routes/kids');
 const centres = require('./routes/centres');
+const profileRoutes = require('./routes/profile');
+const mail = require('./routes/mail');
+
 
 
 mongoose.connect(process.env.DBURL).then(() =>{
@@ -60,6 +63,8 @@ app.use('/api/auth', auth);
 
 app.use('/centres', centres);
 app.use('/kids', kids);
+app.use('/profile', profileRoutes);
+app.use('/email', mail);
 
 
 // catch 404 and forward to error handler

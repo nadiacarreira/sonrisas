@@ -3,11 +3,6 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <select class="custom-select d-block my-3" required>
-       <option *ngFor="let centro of centres" value="{{centro.name}}">
-         {{centro.name}}
-       </option>
-    </select>
   <div *ngFor="let centro of centres">
     <div>
       <h4><i class="fa fa-map-marker" aria-hidden="true"></i>{{ centro.name }}</h4>

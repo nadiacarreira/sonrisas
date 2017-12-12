@@ -3,8 +3,8 @@ const kids = express.Router();
 const Kid = require('../models/Kid');
 
 
+// list kids
 kids.get('/', (req, res, next) => {
-  console.log('ENTRAAAAA')
   Kid.find({}, (err, kids) => {
     if (err) { return res.json(err).status(500); }
 
@@ -12,6 +12,7 @@ kids.get('/', (req, res, next) => {
   });
 });
 
+// id kids
 kids.get('/:id', (req, res, next) => {
   Kid.findById(req.params.id, (err, kids) => {
     if (err)    { return res.json(err).status(500); }
@@ -21,7 +22,7 @@ kids.get('/:id', (req, res, next) => {
   });
 });
 
-
+// new kids
 kids.post('/kids', (req, res, next) => {
   const newkids = new Kid({
     photo: req.body.photo,
@@ -36,5 +37,30 @@ console.log(newkids);
                            return res.json(newkids);
   });
 });
+
+// edit kids
+kids.put('/:id', (req, res) => {
+  console.log('this is my id: ' + req.params.id)
+  const {photo, name, age, about} = req.body;
+  const updates = {photo, name, age, about};
+
+  Kid.findByIdAndUpdate(req.params.id, updates, {new:true})
+    .then(p => res.status(200).json(p))
+    .catch(e => res.status(500).json({error:e.message}));
+});
+
+// delete kids
+kids.delete('/delete-heroe/:id', (req, res, next) => {
+  console.log("delete heroe")
+  let id = req.params.id;
+  console.log("entro en el back, delete kid");
+  console.log(id);
+
+  Kid.findByIdAndRemove(id)
+    .then(o => res.status(200).json(o))
+    .catch(e => res.status(500).json(e));
+});
+
+
 
 module.exports = kids;

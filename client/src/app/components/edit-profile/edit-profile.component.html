@@ -4,27 +4,26 @@
     <form>
       <div class="form-group">
         <label for="name"></label>
-        <input class="form-control" id="name" type="text" [(ngModel)]="formInfo.username" name="username" placeholder="Your name">
+        <input class="form-control" id="name" type="text" [(ngModel)]="username" name="username">
       </div>
       <div class="form-group">
         <label for="password"></label>
-        <input class="form-control" id="password" type="password" [(ngModel)]="formInfo.password" name="password" placeholder="Your password">
+        <input class="form-control" id="password" type="password" [(ngModel)]="password" name="password">
       </div>
       <div class="form-group">
         <label for="email"></label>
-        <input class="form-control" id="email" type="email" [(ngModel)]="formInfo.email" name="email" placeholder="Your email">
+        <input class="form-control" id="email" type="email" [(ngModel)]="email" name="email">
       </div>
       <div class="form-group">
         <label for="sex"></label>
-        <input class="form-control" id="sex" type="sex" [(ngModel)]="formInfo.sex" name="sex" placeholder="Your sex">
+        <input class="form-control" id="sex" type="sex" [(ngModel)]="sex" name="sex">
       </div>
       <div class="form-group">
         <label for="age"></label>
-        <input class="form-control" id="age" type="age" [(ngModel)]="formInfo.age" name="age" placeholder="Your age">
+        <input class="form-control" id="age" type="age" [(ngModel)]="age" name="age">
       </div>
       <!-- <textarea name="message" rows="10" cols="30" placeholder="About you" name="about"></textarea> -->
-      <button (click)="signup()" class="btn btn-info"> Signup</button>
+      <button (click)="signup()" class="btn btn-info"> Edit</button>
     </form>
-    <h5>U don´t have a count? <a href="/">Login!</a></h5>
   </div>
 </div>

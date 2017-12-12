@@ -10,7 +10,7 @@
         <label for="password"></label>
         <input class="form-control"  type="password" [(ngModel)]="password" name="password" placeholder="Your password">
       </div>
-      <button (click)="login(username,password)" class="btn btn-info"> login </button>
+      <button type="button" (click)="login(username,password)" class="btn btn-info"> login </button>
     </form>
     <h5>U don´t have a count? <a href="/signup">Sign Up!</a></h5>
     <p class="error"> {{ error }} </p>
