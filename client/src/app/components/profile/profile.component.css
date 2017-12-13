@@ -1,0 +1,29 @@
+.container{
+  padding: 2%;
+  color: #777677;
+}
+.container h2{
+  color: #fff;
+  background-color:rgba(119,118,119,.3);
+  padding: 20px 2%;
+}
+section{
+  border-bottom: 1px solid #777677;
+  padding: 20px 0;
+}
+.container p, .container h5{
+  display: inline-block;
+}
+p{
+  padding-left: 1%;
+}
+.btn-info {
+    color: #fff;
+    background-color:rgba(119,118,119,.5);
+    border-color: transparent;
+    width: 45%;
+    margin-top: 20px;
+}
+.btn-info:hover{
+  background: #6A808A;
+}

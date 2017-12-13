@@ -35,13 +35,7 @@ export class MapComponent implements OnInit {
    lat: number = 40.4320067;
    lng: number = -3.7115450;
 
-   //points marker
-
-//
   ngOnInit() {
-  }
-  searchCentre(termino:string){
-    console.log(termino)
   }
  }
 

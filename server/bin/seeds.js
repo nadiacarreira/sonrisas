@@ -86,7 +86,7 @@ const centres = [
 
 const kids = [
   {
-    photo:'http://localhost:3000/img/bat.png',
+    photo:'https://res.cloudinary.com/dmxe1gmbm/image/upload/v1513181422/bat_ridunk.png',
     name:"Batman",
     age:1,
     about:`Un niño de año y medio y unos ojos grises enormes. Mira serio a María,
@@ -96,7 +96,7 @@ const kids = [
     adulto que la mayoría de los adultos que le rodean.`,
   },
   {
-    photo:'http://localhost:3000/img/cat.png',
+    photo:'https://res.cloudinary.com/dmxe1gmbm/image/upload/v1513181422/cat_qklvtj.png',
     name:"CatWoman",
     age:2,
     about:`La mirada de Alba también inquieta. No conoce otra vida que la que hay
@@ -107,7 +107,7 @@ const kids = [
     salió del centro penitenciario para seguir creciendo en un centro de acogida.`,
   },
   {
-    photo:'http://localhost:3000/img/iron.png',
+    photo:'https://res.cloudinary.com/dmxe1gmbm/image/upload/v1513181422/iron_zfab91.png',
     name:"Ironman",
     age:1,
     about:`Un niño de año y medio y unos ojos grises enormes. Mira serio a María,
@@ -117,7 +117,7 @@ const kids = [
     adulto que la mayoría de los adultos que le rodean.`,
   },
   {
-    photo:'http://localhost:3000/img/hulk.png',
+    photo:'https://res.cloudinary.com/dmxe1gmbm/image/upload/v1513181422/hulk_m3vffx.png',
     name:"Hulk",
     age:2,
     about:`La mirada de Alba también inquieta. No conoce otra vida que la que hay
@@ -128,7 +128,7 @@ const kids = [
     salió del centro penitenciario para seguir creciendo en un centro de acogida.`,
   },
   {
-    photo:'http://localhost:3000/img/hawgirl.png',
+    photo:'https://res.cloudinary.com/dmxe1gmbm/image/upload/v1513181422/hawgirl_obxlvd.png',
     name:"Hawk Girl",
     age:2,
     about:`La mirada de Alba también inquieta. No conoce otra vida que la que hay
@@ -139,7 +139,7 @@ const kids = [
     salió del centro penitenciario para seguir creciendo en un centro de acogida.`,
   },
   {
-    photo:'http://localhost:3000/img/wonder.png',
+    photo:'https://res.cloudinary.com/dmxe1gmbm/image/upload/v1513181422/wonder_tfoqz8.png',
     name:"Wonder Woman",
     age:2,
     about:`La mirada de Alba también inquieta. No conoce otra vida que la que hay

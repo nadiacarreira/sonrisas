@@ -20,6 +20,7 @@ export class LoginFormComponent{
 
   logout() {
     this.auth.logout().subscribe();
+    this.router.navigate(['/home']);
   }
   submitForm(myForm) {
     console.log(myForm);
