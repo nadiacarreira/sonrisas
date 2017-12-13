@@ -23,7 +23,7 @@ const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'centres', component: CentresComponent },
   { path: 'heroes', component: HeroesComponent },
-  { path: 'edit-heroes/:id', component: EditHeroesComponent },  
+  { path: 'edit-heroes/:id', component: EditHeroesComponent },
   { path: 'economica', component: EconomicaComponent },
   { path: 'juguetes', component: JuguetesComponent },
   { path: 'voluntario', component: VoluntarioComponent },

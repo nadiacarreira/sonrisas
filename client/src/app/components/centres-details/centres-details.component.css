@@ -9,6 +9,9 @@
 .container>div:first-of-type{
   margin-top: 20px;
 }
+.container>figure>img{
+  width: 50%;
+}
 .grey {
   border-top:1px solid rgba(232, 227, 227, 0.5);
   border-bottom:1px solid rgba(232, 227, 227, 0.5);

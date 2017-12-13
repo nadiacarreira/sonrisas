@@ -7,31 +7,21 @@ const Mail = require('../models/Mail');
 
 
 router.post('/sendEmail', (req, res, next) => {
-    Mail.findById(req.params.id)
-    .populate('userId')
-    .then((questionData) => {
-
-      if (typeof(questionData.userId.email) != "undefined"){
-        console.log('Hello!');
-      nodemailer.createTestAccount((err, account) => {
-
-
-
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
         service: "Gmail",
         auth: {
-            user: 'sonrisas@gmail.com', // generated ethereal user
-            pass: 'sonrisas'  // generated ethereal password
+            user: 'asociacion.dibujando.sonrisas@gmail.com', // generated ethereal user
+            pass: 'dibujandosonrisas'  // generated ethereal password
         }
     });
-
+    console.log(req.user.email);
     let mailOptions = {
-        from: 'sonrisas@gmail.com', // sender address
-        to: questionData.userId.email, // list of receivers
-        subject: 'Hello ✔', // Subject line
-        text: 'Gracias por enviarnos tu solicitud', // plain text body
-        html: 'Gracias por ponerte en contacto con nosotros' // html body
+        from: 'asociacion.dibujando.sonrisas@gmail.com', // sender address
+        to: req.user.email, // list of receivers
+        subject: 'Hello ✔', // Subject line (titulo)
+        text: 'Gracias por enviarnos tu solicitud', // plain text body(creemos q no vale)
+        html: 'Gracias por ponerte en contacto con nosotros, ' // html body(lo q queremos decir al cliente)
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
@@ -39,13 +29,9 @@ router.post('/sendEmail', (req, res, next) => {
             console.log(error);
         } else {
             console.log('Message sent: ' + info.response);
-            res.redirect("/user/profile");
         }
     });
 
 });
-      }
-    })
-})
 
 module.exports = router;

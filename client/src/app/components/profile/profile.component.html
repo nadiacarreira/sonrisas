@@ -1,9 +1,22 @@
-<p>
-  profile works!
-</p>
-<div class="animated fadeIn fast" *ngIf="user">
-  <p>{{ user.username }}</p>
-  <p>{{ user.email }}</p>
-  <p>{{ user.age }}</p>
-  <p>{{ user.sex }}</p>
+<div *ngIf="user" class="animated fadeIn fast container login">
+  <div class="col-xs-4 col-sm-6">
+    <h2>Your profile</h2>
+    <section>
+      <h5>Your name:</h5>
+      <p> {{ user.username }} </p>
+    </section>
+    <section>
+      <h5>Your email:</h5>
+      <p> {{ user.email }} </p>
+    </section>
+    <section>
+      <h5>Your age:</h5>
+      <p> {{ user.age }} </p>
+    </section>
+    <section>
+      <h5>Your sex:</h5>
+      <p> {{ user.sex }} </p>
+    </section>
+  </div>
+  <button type="button" name="button" (click)="logout()">log out</button>
 </div>

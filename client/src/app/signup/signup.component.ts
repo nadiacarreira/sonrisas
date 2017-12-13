@@ -17,11 +17,14 @@ formInfo: any ={
   constructor(private auth:AuthService,
               private router: Router ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+
   signup(){
     const {username, password, email, sex, age} = this.formInfo
-    this.auth.signup(username, password, email, sex, age).subscribe();
-    this.router.navigate(['/profile']);
+    this.auth.signup(username, password, email, sex, age)
+    .subscribe(() => this.router.navigate(['/profile']))
   }
 
 }

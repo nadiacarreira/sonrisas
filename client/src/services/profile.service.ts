@@ -11,13 +11,16 @@ const BASEURL = `${DOMAIN}${PATH}`;
 
 @Injectable()
 export class ProfileService {
-  user:object;
+  user;
 
   private options = {withCredentials:true};
 
-  constructor(private http: Http) {}
-  getUserDetail(id){
-    return this.http.get(`${BASEURL}/${id}`)
+  constructor(
+    private http: Http) {}
+
+  getUser(id):Observable<any>{
+    console.log("hola")
+    return this.http.get(`${BASEURL}/${id}`, this.options)
                     .map(res => res.json());
   }
 }

@@ -10,7 +10,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 user;
-  constructor(    public router:Router,
+  constructor(
+      public router:Router,
       public profileService:ProfileService,
       public auth:AuthService,
       public route:ActivatedRoute) {
@@ -18,8 +19,11 @@ user;
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.profileService.getUserDetail(params['id'])
+      this.profileService.getUser(params['id'])
         .subscribe(user => this.user = user);
     })
+  }
+  logout(){
+    this.auth.logout().subscribe();
   }
 }

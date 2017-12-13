@@ -9,10 +9,11 @@ import {AuthService} from '../../../../services/auth.service';
 export class NavbarComponent implements OnInit {
   user:object;
   constructor(private auth:AuthService) {
-    this.auth.loginEvent.subscribe( user =>{
-      this.user = user;
-    })
+
   }
   ngOnInit() {
+    this.auth.loginEvent
+    .map( user => this.user = user)
+    .subscribe()
   }
 }

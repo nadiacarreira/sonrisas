@@ -12,6 +12,7 @@ export class CentresDetailsComponent implements OnInit {
   constructor(
     private route:ActivatedRoute,
     private centreService: CentreService) {
+      
       this.route.params.subscribe(params=>{
         this.centreService.get(params['id'])
         .subscribe(centro => this.centre = centro)

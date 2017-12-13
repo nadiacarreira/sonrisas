@@ -22,16 +22,15 @@ p{
   font-family: 'Bad Script', cursive;
   font-size: 1.5em;
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 span{
   font-size: 0.5em;
 }
 section>div{
-  width: 300px;
+  width: 70%;
   margin: 0 auto;
-  height: 200px;
-  padding-top: 80px;
+  padding: 5%;
 }
 .fluid-container, .main-container {
     margin-top: 0px;
@@ -41,7 +40,6 @@ section>div{
     background-color:rgba(119,118,119,.5);
     border-color: transparent;
     width: 45%;
-    margin-bottom: 40px;
 }
 .btn-info:hover{
   background: #6A808A;

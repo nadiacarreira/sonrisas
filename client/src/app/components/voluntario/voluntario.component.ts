@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IMyDpOptions} from 'mydatepicker';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-voluntario',
@@ -16,9 +17,13 @@ export class VoluntarioComponent implements OnInit {
       // Initialized to specific date (09.10.2018).
       public model: any = { date: { year: 2018, month: 10, day: 9 } };
 
-  constructor() { }
+  constructor(private authService:AuthService) { }
 
   ngOnInit() {
+  }
+  sendEmail(){
+    this.authService.sendMail().subscribe();
+    console.log("email enviado");
   }
 
 }
