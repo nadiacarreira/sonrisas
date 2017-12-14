@@ -20,7 +20,7 @@ app.set('port', port);
  */
 
  var server = http.createServer(app);
- // require('../sockets/chat')(server);
+ require('../sockets/chat')(server);
 
 var server = http.createServer(app);
 
