@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MyDatePickerModule } from 'mydatepicker';
-import {environment} from 'environments/environment';
 
 // routes
 
@@ -14,7 +13,6 @@ import { HeroesService } from '../services/heroes.service';
 import { CentreService } from '../services/centres.service';
 import { SweetAlertService } from '../services/sweets.service';
 import { ProfileService } from '../services/profile.service';
-// import { ChatService } from '../services/chat.service';
 
 
 
@@ -68,7 +66,6 @@ import { NewHeroeComponent } from './components/new-heroe/new-heroe.component';
     EditHeroesComponent,
     EditCentresComponent,
     VoluntarioComponent,
-    // ChatComponent,
     NewCentreComponent,
     NewHeroeComponent,
     EditHeroesComponent,
@@ -81,7 +78,7 @@ import { NewHeroeComponent } from './components/new-heroe/new-heroe.component';
     MyDatePickerModule,
     APP_ROUTING,
     AgmCoreModule.forRoot({
-      apiKey: environment.key
+      apiKey: 'AIzaSyDKH84vXMFj4mYyrcEgFydn7EQGzmZYKq0'
     })
   ],
   providers: [AuthService,
@@ -90,7 +87,6 @@ import { NewHeroeComponent } from './components/new-heroe/new-heroe.component';
               MarkerManager,
               SweetAlertService,
               ProfileService,
-              // ChatService
               ],
   bootstrap: [AppComponent]
 })

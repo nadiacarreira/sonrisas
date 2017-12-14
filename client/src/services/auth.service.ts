@@ -3,10 +3,10 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
-import {environment} from '../environments/environment';
+import { environment }  from '../environments/environment';
 
-const BASE_DOMAIN = environment.baseurl;
-const BASE_URL = `${BASE_DOMAIN}/api/auth`;
+const DOMAIN = environment.baseurl;
+const BASE_URL = `${DOMAIN}/api/auth`;
 
 @Injectable()
 export class AuthService {
@@ -64,7 +64,7 @@ export class AuthService {
   }
   sendMail(){
     console.log(this.user)
-    return this.http.post(`${BASE_DOMAIN}/email/sendEmail`, this.user, this.options)
+    return this.http.post(`${DOMAIN}/email/sendEmail`, this.user, this.options)
     .map(res=> res.json())
   }
 }

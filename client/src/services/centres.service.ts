@@ -3,8 +3,7 @@ import {Http} from '@angular/http';
 
 import {Observable} from 'rxjs';
 import 'rxjs/add/operator/map';
-import {environment} from '../environments/environment';
-
+import { environment }  from '../environments/environment';
 
 const DOMAIN = environment.baseurl;
 const PATH = "/centres";
