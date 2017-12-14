@@ -3,8 +3,11 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import {environment} from '../environments/environment';
 
-const DOMAIN = "http://localhost:3000";
+
+
+const DOMAIN = environment.baseurl;
 const PATH = "/kids";
 const BASEURL = `${DOMAIN}${PATH}`;
 

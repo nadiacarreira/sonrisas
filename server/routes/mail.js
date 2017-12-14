@@ -21,7 +21,7 @@ router.post('/sendEmail', (req, res, next) => {
         to: req.user.email, // list of receivers
         subject: 'Hello ✔', // Subject line (titulo)
         text: 'Gracias por enviarnos tu solicitud', // plain text body(creemos q no vale)
-        html: 'Gracias por ponerte en contacto con nosotros, ' // html body(lo q queremos decir al cliente)
+        html: 'En primer lugar, desde el equipo Sonrisas queremos darle las gracias por ponerse en contacto con nosotros, es un placer recibir candidaturas para el voluntariado. Lo tendremos en cuenta y le respoderemos lo antes posible. muchas gracias.' // html body(lo q queremos decir al cliente)
     };
 
     transporter.sendMail(mailOptions, function (error, info) {

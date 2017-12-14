@@ -1,4 +1,9 @@
 <h1> Historias de nuestros super héroes: </h1>
+<p>Pequeños super héroes que luchan por estar con sus madres, tristemente no entienden
+por qué tienen que vivir esta situación, ellos no tienen la culpa de los problemas
+familiares, pero se ven involucrados en ellos. Son personajes ficticios
+para mantener el anonimato de los menores, aunque con situaciones reales, dejemos
+que ellos nos cuenten sus historias:</p>
 <div class="card-columns container animated fadeIn fast">
   <div *ngFor="let hero of kids" class="card">
    <img class="card-img-top" [src]="hero.photo"/>
@@ -7,6 +12,6 @@
       <p class="card-text">Edad: {{ hero.age }}</p>
       <p class="card-text">{{ hero.about }}</p>
     </div>
-    <a class="btn btn-info" [routerLink]="['/edit-heroes', hero._id]">Edit</a>
+    <!-- <a class="btn btn-info" [routerLink]="['/edit-heroes', hero._id]">Edit</a> -->
   </div>
 </div>

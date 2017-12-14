@@ -19,7 +19,6 @@ const profileRoutes = require('./routes/profile');
 const mail = require('./routes/mail');
 
 
-
 mongoose.connect(process.env.DBURL).then(() =>{
   console.log(`Connected to DB: ${process.env.DBURL}`);
 });
@@ -37,29 +36,27 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'ejs');
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use(session({
-  secret: 'ironfundingdev',
+  secret: process.env.SUPER_SECRET,
   resave: false,
   saveUninitialized: true,
   store: new MongoStore( { mongooseConnection: mongoose.connection })
-}))
-
+}));
 
 require('./passport')(app);
 
 app.use('/api/auth', auth);
+
+app.use(function(req, res) {
+  res.sendfile(__dirname + '/public/index.html');
+});
 
 app.use('/centres', centres);
 app.use('/kids', kids);

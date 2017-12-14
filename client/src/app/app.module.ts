@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MyDatePickerModule } from 'mydatepicker';
+import {environment} from 'environments/environment';
 
 // routes
 
@@ -80,7 +81,7 @@ import { NewHeroeComponent } from './components/new-heroe/new-heroe.component';
     MyDatePickerModule,
     APP_ROUTING,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDKH84vXMFj4mYyrcEgFydn7EQGzmZYKq0'
+      apiKey: environment.key
     })
   ],
   providers: [AuthService,
